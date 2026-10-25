@@ -1,0 +1,32 @@
+{
+  "conversionRequests": {
+    "inputPanelProperties": {
+      "dryBulbTemperature": {
+        "quantityType": "temperature",
+        "value": 25.1,
+        "unit": "oC",
+        "targetUnit": "K"
+      },
+      "absolutePressure": {
+        "quantityType": "pressure",
+        "value": 90000,
+        "unit": "Pa",
+        "targetUnit": "bar"
+      }
+    },
+    "outputPanelProperties": {
+      "airDensity": {
+        "quantityType": "density",
+        "value": 1.2,
+        "unit": "kg/m3",
+        "targetUnit": "lb/in3"
+      },
+      "absolutePressure": {
+        "quantityType": "pressure",
+        "value": 90000,
+        "unit": "Pa",
+        "targetUnit": "hPa"
+      }
+    }
+  }
+}

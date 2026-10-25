@@ -1,0 +1,6 @@
+{
+  "serviceName": "Energy Flow X",
+  "cause": "UnitSystemParseException",
+  "message": "Unsupported unit symbol: {xyz}. Target class: TemperatureUnits",
+  "timestamp": "2024-02-10T14:39:11.8551038Z"
+}

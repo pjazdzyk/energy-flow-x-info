@@ -1,0 +1,46 @@
+{
+  "processType": "MIXING",
+  "processMode": "SIMPLE_MIXING",
+  "mixingAirFlows": [
+    {
+      "pressure": {
+        "value": 101325.0,
+        "unit": "Pa"
+      },
+      "temperature": {
+        "value": 15,
+        "unit": "oC"
+      },
+      "relativeHumidity": {
+        "value": 30,
+        "unit": "%"
+      },
+      "volumetricFlow": {
+        "value": 20000,
+        "unit": "m3/h"
+      }
+    }
+  ],
+  "airFlowData": {
+    "pressure": {
+      "value": 101325.0,
+      "unit": "Pa"
+    },
+    "temperature": {
+      "value": -20,
+      "unit": "oC"
+    },
+    "relativeHumidity": {
+      "value": 95,
+      "unit": "%"
+    },
+    "volumetricFlow": {
+      "value": 10000,
+      "unit": "m3/h"
+    }
+  },
+  "unitOverrides": {
+    "pressure": "kPa",
+    "volumetricFlow": "m3/min"
+  }
+}

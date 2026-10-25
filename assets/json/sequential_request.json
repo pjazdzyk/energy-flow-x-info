@@ -1,0 +1,72 @@
+{
+  "inletAirFlow": {
+    "pressure": {
+      "value": 101325,
+      "unit": "Pa"
+    },
+    "temperature": {
+      "value": 35,
+      "unit": "oC"
+    },
+    "relativeHumidity": {
+      "value": 55,
+      "unit": "%"
+    },
+    "volumetricFlow": {
+      "value": 1000,
+      "unit": "m3/h"
+    }
+  },
+  "processRequests": [
+    {
+      "processType": "MIXING",
+      "processMode": "SIMPLE_MIXING",
+      "mixingAirFlows": [
+        {
+          "temperature": {
+            "value": 25,
+            "unit": "oC"
+          },
+          "relativeHumidity": {
+            "value": 70,
+            "unit": "%"
+          },
+          "volumetricFlow": {
+            "value": 1000,
+            "unit": "m3/h"
+          }
+        }
+      ]
+    },
+    {
+      "processType": "COOLING",
+      "processMode": "FROM_TEMPERATURE",
+      "targetTemperature": {
+        "value": 25,
+        "unit": "oC"
+      },
+      "coolantData": {
+        "supplyTemperature": {
+          "value": 7,
+          "unit": "oC"
+        },
+        "returnTemperature": {
+          "value": 14,
+          "unit": "oC"
+        }
+      }
+    },
+    {
+      "processType": "HEATING",
+      "processMode": "FROM_HUMIDITY",
+      "targetRelativeHumidity": {
+        "value": 30,
+        "unit": "%"
+      }
+    }
+  ],
+  "unitOverrides": {
+    "volumetricFlow": "m3/h",
+    "power": "W"
+  }
+}

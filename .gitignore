@@ -1,0 +1,63 @@
+##############################
+## What this repository holds
+##############################
+# energy-flow-x-info, the public showcase of EnergyFlowX: Markdown, images, sample
+# JSON payloads, and the scripts under reference-comparisons/ that regenerate the
+# reference figures.
+#
+# There is no Java, Maven, Gradle, Eclipse or NetBeans here. This file used to
+# carry the boilerplate for all five, plus three separate spellings of the same
+# .idea/ rule, which made it impossible to see what was actually being ignored.
+
+##############################
+## Python (reference-comparisons scripts)
+##############################
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+##############################
+## IDE and editor
+##############################
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.code-workspace
+*.swp
+*~
+
+##############################
+## Agent tooling
+##############################
+# Local agent config, instructions and skills, not repository content.
+.qwen/
+.opencode/
+.claude/
+.agents/
+.omp/
+.pi/
+.limen/
+.cursor/
+CLAUDE.md
+AGENTS.md
+
+##############################
+## OS
+##############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+##############################
+## Scratch
+##############################
+*.bak
+*.tmp
+out/

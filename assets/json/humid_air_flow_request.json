@@ -1,0 +1,18 @@
+{
+  "temperature": {
+    "value": 45,
+    "unit": "oC"
+  },
+  "relativeHumidity": {
+    "value": 80,
+    "unit": "%"
+  },
+  "volumetricFlow": {
+    "value": 30000,
+    "unit": "m3/h"
+  },
+  "unitOverrides": {
+    "massFlow": "kg/h",
+    "temperature": "K"
+  }
+}

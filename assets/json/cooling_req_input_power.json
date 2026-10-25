@@ -1,0 +1,38 @@
+{
+  "processType": "COOLING",
+  "processMode": "FROM_POWER",
+  "processFlowMode": "FROM_OUTLET_VOL_FLOW",
+  "heatOfProcess": {
+    "value": 20,
+    "unit": "kW"
+  },
+  "coolantData": {
+    "supplyTemperature": {
+      "value": 7,
+      "unit": "oC"
+    },
+    "returnTemperature": {
+      "value": 14,
+      "unit": "oC"
+    }
+  },
+  "airFlowData": {
+    "pressure": {
+      "value": 101325.0,
+      "unit": "Pa"
+    },
+    "temperature": {
+      "value": 35,
+      "unit": "oC"
+    },
+    "relativ`eHumidity": {
+      "value": 55,
+      "unit": "%"
+    },
+    "volumetricFlow": {
+      "value": 30000,
+      "unit": "m3/h"
+    }
+  },
+  "unitOverrides": {}
+}

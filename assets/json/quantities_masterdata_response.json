@@ -1,0 +1,986 @@
+[
+  {
+    "quantityType": "Latitude",
+    "supportedUnits": [
+      {
+        "unitName": "DEGREES",
+        "unitSymbol": "°"
+      },
+      {
+        "unitName": "RADIANS",
+        "unitSymbol": "rad"
+      }
+    ]
+  },
+  {
+    "quantityType": "Area",
+    "supportedUnits": [
+      {
+        "unitName": "SQUARE_METER",
+        "unitSymbol": "m²"
+      },
+      {
+        "unitName": "SQUARE_KILOMETER",
+        "unitSymbol": "km²"
+      },
+      {
+        "unitName": "SQUARE_CENTIMETER",
+        "unitSymbol": "cm²"
+      },
+      {
+        "unitName": "SQUARE_MILLIMETER",
+        "unitSymbol": "mm²"
+      },
+      {
+        "unitName": "ARE",
+        "unitSymbol": "a"
+      },
+      {
+        "unitName": "HECTARE",
+        "unitSymbol": "ha"
+      },
+      {
+        "unitName": "SQUARE_INCH",
+        "unitSymbol": "in²"
+      },
+      {
+        "unitName": "SQUARE_FOOT",
+        "unitSymbol": "ft²"
+      },
+      {
+        "unitName": "SQUARE_YARD",
+        "unitSymbol": "yd²"
+      },
+      {
+        "unitName": "ACRE",
+        "unitSymbol": "ac"
+      },
+      {
+        "unitName": "SQUARE_MILE",
+        "unitSymbol": "mi²"
+      }
+    ]
+  },
+  {
+    "quantityType": "BypassFactor",
+    "supportedUnits": []
+  },
+  {
+    "quantityType": "VolumetricFlow",
+    "supportedUnits": [
+      {
+        "unitName": "CUBIC_METERS_PER_SECOND",
+        "unitSymbol": "m³/s"
+      },
+      {
+        "unitName": "CUBIC_METERS_PER_MINUTE",
+        "unitSymbol": "m³/min"
+      },
+      {
+        "unitName": "CUBIC_METERS_PER_HOUR",
+        "unitSymbol": "m³/h"
+      },
+      {
+        "unitName": "CUBIC_FEET_PER_MINUTE",
+        "unitSymbol": "ft³/min"
+      },
+      {
+        "unitName": "LITRE_PER_SECOND",
+        "unitSymbol": "l/s"
+      },
+      {
+        "unitName": "LITRE_PER_MINUTE",
+        "unitSymbol": "l/min"
+      },
+      {
+        "unitName": "LITRE_PER_HOUR",
+        "unitSymbol": "l/h"
+      },
+      {
+        "unitName": "GALLONS_PER_SECOND_US",
+        "unitSymbol": "gal/s_US"
+      },
+      {
+        "unitName": "GALLONS_PER_MINUTE_US",
+        "unitSymbol": "gal/min_US"
+      },
+      {
+        "unitName": "GALLONS_PER_HOUR_US",
+        "unitSymbol": "gal/h_US"
+      },
+      {
+        "unitName": "GALLONS_PER_SECOND_UK",
+        "unitSymbol": "gal/s_UK"
+      },
+      {
+        "unitName": "GALLONS_PER_MINUTE_UK",
+        "unitSymbol": "gal/min_UK"
+      },
+      {
+        "unitName": "GALLONS_PER_HOUR_UK",
+        "unitSymbol": "gal/h_UK"
+      }
+    ]
+  },
+  {
+    "quantityType": "Bearing",
+    "supportedUnits": [
+      {
+        "unitName": "DEGREES",
+        "unitSymbol": "°"
+      },
+      {
+        "unitName": "RADIANS",
+        "unitSymbol": "rad"
+      }
+    ]
+  },
+  {
+    "quantityType": "Pressure",
+    "supportedUnits": [
+      {
+        "unitName": "PASCAL",
+        "unitSymbol": "Pa"
+      },
+      {
+        "unitName": "HECTOPASCAL",
+        "unitSymbol": "hPa"
+      },
+      {
+        "unitName": "KILOPASCAL",
+        "unitSymbol": "kPa"
+      },
+      {
+        "unitName": "MEGAPASCAL",
+        "unitSymbol": "MPa"
+      },
+      {
+        "unitName": "BAR",
+        "unitSymbol": "bar"
+      },
+      {
+        "unitName": "MILLIBAR",
+        "unitSymbol": "mbar"
+      },
+      {
+        "unitName": "TORR",
+        "unitSymbol": "Torr"
+      },
+      {
+        "unitName": "PSI",
+        "unitSymbol": "psi"
+      },
+      {
+        "unitName": "METRE_OF_WATER_10",
+        "unitSymbol": "mH₂O_10"
+      },
+      {
+        "unitName": "METRE_OF_WATER_60",
+        "unitSymbol": "mH₂O_60"
+      },
+      {
+        "unitName": "METRE_OF_WATER_95",
+        "unitSymbol": "mH₂O_95"
+      },
+      {
+        "unitName": "MILLIMETRE_OF_MERCURY_10",
+        "unitSymbol": "mmHg_10"
+      },
+      {
+        "unitName": "MILLIMETRE_OF_MERCURY_60",
+        "unitSymbol": "mmHg_60"
+      },
+      {
+        "unitName": "MILLIMETRE_OF_MERCURY_95",
+        "unitSymbol": "mmHg_95"
+      }
+    ]
+  },
+  {
+    "quantityType": "Perimeter",
+    "supportedUnits": [
+      {
+        "unitName": "METER",
+        "unitSymbol": "m"
+      },
+      {
+        "unitName": "CENTIMETER",
+        "unitSymbol": "cm"
+      },
+      {
+        "unitName": "MILLIMETER",
+        "unitSymbol": "mm"
+      },
+      {
+        "unitName": "KILOMETER",
+        "unitSymbol": "km"
+      },
+      {
+        "unitName": "MILE",
+        "unitSymbol": "mi"
+      },
+      {
+        "unitName": "NAUTICAL_MILE",
+        "unitSymbol": "nmi"
+      },
+      {
+        "unitName": "FEET",
+        "unitSymbol": "ft"
+      },
+      {
+        "unitName": "INCH",
+        "unitSymbol": "in"
+      }
+    ]
+  },
+  {
+    "quantityType": "Temperature",
+    "supportedUnits": [
+      {
+        "unitName": "KELVIN",
+        "unitSymbol": "K"
+      },
+      {
+        "unitName": "CELSIUS",
+        "unitSymbol": "°C"
+      },
+      {
+        "unitName": "FAHRENHEIT",
+        "unitSymbol": "°F"
+      }
+    ]
+  },
+  {
+    "quantityType": "Volume",
+    "supportedUnits": [
+      {
+        "unitName": "CUBIC_METER",
+        "unitSymbol": "m³"
+      },
+      {
+        "unitName": "CUBIC_CENTIMETER",
+        "unitSymbol": "cm³"
+      },
+      {
+        "unitName": "CUBIC_DECIMETER",
+        "unitSymbol": "dm³"
+      },
+      {
+        "unitName": "CUBIC_FEET",
+        "unitSymbol": "ft³"
+      },
+      {
+        "unitName": "LITRE",
+        "unitSymbol": "l"
+      },
+      {
+        "unitName": "HECTOLITRE",
+        "unitSymbol": "hl"
+      },
+      {
+        "unitName": "MILLILITRE",
+        "unitSymbol": "ml"
+      },
+      {
+        "unitName": "OUNCE",
+        "unitSymbol": "fl.oz"
+      },
+      {
+        "unitName": "PINT",
+        "unitSymbol": "pt"
+      },
+      {
+        "unitName": "GALLON_US",
+        "unitSymbol": "gal_US"
+      },
+      {
+        "unitName": "GALLON_UK",
+        "unitSymbol": "gal_UK"
+      }
+    ]
+  },
+  {
+    "quantityType": "Energy",
+    "supportedUnits": [
+      {
+        "unitName": "JOULE",
+        "unitSymbol": "J"
+      },
+      {
+        "unitName": "MILLIJOULE",
+        "unitSymbol": "mJ"
+      },
+      {
+        "unitName": "KILOJOULE",
+        "unitSymbol": "kJ"
+      },
+      {
+        "unitName": "MEGAJOULE",
+        "unitSymbol": "MJ"
+      },
+      {
+        "unitName": "BTU",
+        "unitSymbol": "BTU"
+      },
+      {
+        "unitName": "CALORIE",
+        "unitSymbol": "cal"
+      },
+      {
+        "unitName": "KILOCALORIE",
+        "unitSymbol": "kcal"
+      },
+      {
+        "unitName": "WATT_HOUR",
+        "unitSymbol": "Wh"
+      },
+      {
+        "unitName": "KILOWATT_HOUR",
+        "unitSymbol": "kWh"
+      }
+    ]
+  },
+  {
+    "quantityType": "Density",
+    "supportedUnits": [
+      {
+        "unitName": "KILOGRAM_PER_CUBIC_METER",
+        "unitSymbol": "kg/m³"
+      },
+      {
+        "unitName": "POUND_PER_CUBIC_FOOT",
+        "unitSymbol": "lb/ft³"
+      },
+      {
+        "unitName": "POUND_PER_CUBIC_INCH",
+        "unitSymbol": "lb/in³"
+      }
+    ]
+  },
+  {
+    "quantityType": "Torque",
+    "supportedUnits": [
+      {
+        "unitName": "NEWTON_METER",
+        "unitSymbol": "N·m"
+      },
+      {
+        "unitName": "MILLINEWTON_METER",
+        "unitSymbol": "mN·m"
+      },
+      {
+        "unitName": "KILOPOND_METER",
+        "unitSymbol": "kp·m"
+      },
+      {
+        "unitName": "FOOT_POUND",
+        "unitSymbol": "ft·lb"
+      },
+      {
+        "unitName": "INCH_POUND",
+        "unitSymbol": "in·lb"
+      }
+    ]
+  },
+  {
+    "quantityType": "RelativeHumidity",
+    "supportedUnits": [
+      {
+        "unitName": "PERCENT",
+        "unitSymbol": "%"
+      },
+      {
+        "unitName": "DECIMAL",
+        "unitSymbol": ""
+      }
+    ]
+  },
+  {
+    "quantityType": "Momentum",
+    "supportedUnits": [
+      {
+        "unitName": "KILOGRAM_METER_PER_SECOND",
+        "unitSymbol": "kg·m/s"
+      },
+      {
+        "unitName": "POUND_FEET_PER_SECOND",
+        "unitSymbol": "lb·ft/s"
+      },
+      {
+        "unitName": "GRAM_CENTIMETRE_PER_SECOND",
+        "unitSymbol": "g·cm/s"
+      }
+    ]
+  },
+  {
+    "quantityType": "ThermalConductivity",
+    "supportedUnits": [
+      {
+        "unitName": "WATTS_PER_METER_KELVIN",
+        "unitSymbol": "W/(m·K)"
+      },
+      {
+        "unitName": "KILOWATTS_PER_METER_KELVIN",
+        "unitSymbol": "kW/(m·K)"
+      },
+      {
+        "unitName": "BTU_PER_HOUR_FOOT_FAHRENHEIT",
+        "unitSymbol": "BTU/(h·ft·°F)"
+      }
+    ]
+  },
+  {
+    "quantityType": "ThermalDiffusivity",
+    "supportedUnits": [
+      {
+        "unitName": "SQUARE_METER_PER_SECOND",
+        "unitSymbol": "m²/s"
+      },
+      {
+        "unitName": "SQUARE_FEET_PER_SECOND",
+        "unitSymbol": "ft²/s"
+      }
+    ]
+  },
+  {
+    "quantityType": "GrashofNumber",
+    "supportedUnits": []
+  },
+  {
+    "quantityType": "PrandtlNumber",
+    "supportedUnits": []
+  },
+  {
+    "quantityType": "Longitude",
+    "supportedUnits": [
+      {
+        "unitName": "DEGREES",
+        "unitSymbol": "°"
+      },
+      {
+        "unitName": "RADIANS",
+        "unitSymbol": "rad"
+      }
+    ]
+  },
+  {
+    "quantityType": "SpecificEnthalpy",
+    "supportedUnits": [
+      {
+        "unitName": "JOULE_PER_KILOGRAM",
+        "unitSymbol": "J/kg"
+      },
+      {
+        "unitName": "KILOJOULE_PER_KILOGRAM",
+        "unitSymbol": "kJ/kg"
+      },
+      {
+        "unitName": "BTU_PER_POUND",
+        "unitSymbol": "BTU/lb"
+      }
+    ]
+  },
+  {
+    "quantityType": "FrictionFactor",
+    "supportedUnits": []
+  },
+  {
+    "quantityType": "HumidityRatio",
+    "supportedUnits": [
+      {
+        "unitName": "KILOGRAM_PER_KILOGRAM",
+        "unitSymbol": "kg/kg"
+      },
+      {
+        "unitName": "GRAM_PER_KILOGRAM",
+        "unitSymbol": "g/kg"
+      },
+      {
+        "unitName": "POUND_PER_POUND",
+        "unitSymbol": "lb/lb"
+      }
+    ]
+  },
+  {
+    "quantityType": "LinearMassDensity",
+    "supportedUnits": [
+      {
+        "unitName": "KILOGRAM_PER_METER",
+        "unitSymbol": "kg/m"
+      },
+      {
+        "unitName": "TONNE_PER_METER",
+        "unitSymbol": "t/m"
+      },
+      {
+        "unitName": "OUNCE_PER_FOOT",
+        "unitSymbol": "oz/ft"
+      },
+      {
+        "unitName": "POUND_PER_FOOT",
+        "unitSymbol": "lb/ft"
+      }
+    ]
+  },
+  {
+    "quantityType": "Angle",
+    "supportedUnits": [
+      {
+        "unitName": "DEGREES",
+        "unitSymbol": "°"
+      },
+      {
+        "unitName": "RADIANS",
+        "unitSymbol": "rad"
+      }
+    ]
+  },
+  {
+    "quantityType": "Ratio",
+    "supportedUnits": [
+      {
+        "unitName": "PERCENT",
+        "unitSymbol": "%"
+      },
+      {
+        "unitName": "DECIMAL",
+        "unitSymbol": ""
+      }
+    ]
+  },
+  {
+    "quantityType": "ReynoldsNumber",
+    "supportedUnits": []
+  },
+  {
+    "quantityType": "LinearResistance",
+    "supportedUnits": [
+      {
+        "unitName": "PASCAL_PER_METER",
+        "unitSymbol": "Pa/m"
+      },
+      {
+        "unitName": "INCH_OF_WATER_PER_100_FEET",
+        "unitSymbol": "inH₂O/100ft"
+      },
+      {
+        "unitName": "INCH_OF_MERCURY_PER_100_FEET",
+        "unitSymbol": "inHg/100ft"
+      }
+    ]
+  },
+  {
+    "quantityType": "Velocity",
+    "supportedUnits": [
+      {
+        "unitName": "METER_PER_SECOND",
+        "unitSymbol": "m/s"
+      },
+      {
+        "unitName": "CENTIMETER_PER_SECOND",
+        "unitSymbol": "cm/s"
+      },
+      {
+        "unitName": "KILOMETER_PER_HOUR",
+        "unitSymbol": "km/h"
+      },
+      {
+        "unitName": "INCH_PER_SECOND",
+        "unitSymbol": "in/s"
+      },
+      {
+        "unitName": "FEET_PER_SECOND",
+        "unitSymbol": "ft/s"
+      },
+      {
+        "unitName": "MILES_PER_HOUR",
+        "unitSymbol": "mph"
+      },
+      {
+        "unitName": "KNOT",
+        "unitSymbol": "kn"
+      },
+      {
+        "unitName": "MACH",
+        "unitSymbol": "Mach"
+      }
+    ]
+  },
+  {
+    "quantityType": "Diameter",
+    "supportedUnits": [
+      {
+        "unitName": "METER",
+        "unitSymbol": "m"
+      },
+      {
+        "unitName": "CENTIMETER",
+        "unitSymbol": "cm"
+      },
+      {
+        "unitName": "MILLIMETER",
+        "unitSymbol": "mm"
+      },
+      {
+        "unitName": "KILOMETER",
+        "unitSymbol": "km"
+      },
+      {
+        "unitName": "MILE",
+        "unitSymbol": "mi"
+      },
+      {
+        "unitName": "NAUTICAL_MILE",
+        "unitSymbol": "nmi"
+      },
+      {
+        "unitName": "FEET",
+        "unitSymbol": "ft"
+      },
+      {
+        "unitName": "INCH",
+        "unitSymbol": "in"
+      }
+    ]
+  },
+  {
+    "quantityType": "KinematicViscosity",
+    "supportedUnits": [
+      {
+        "unitName": "SQUARE_METER_PER_SECOND",
+        "unitSymbol": "m²/s"
+      },
+      {
+        "unitName": "SQUARE_FOOT_PER_SECOND",
+        "unitSymbol": "ft²/s"
+      }
+    ]
+  },
+  {
+    "quantityType": "Force",
+    "supportedUnits": [
+      {
+        "unitName": "NEWTON",
+        "unitSymbol": "N"
+      },
+      {
+        "unitName": "KILONEWTON",
+        "unitSymbol": "kN"
+      },
+      {
+        "unitName": "KILOPOND",
+        "unitSymbol": "kp"
+      },
+      {
+        "unitName": "DYNE",
+        "unitSymbol": "dyn"
+      },
+      {
+        "unitName": "POUND_FORCE",
+        "unitSymbol": "lbf"
+      },
+      {
+        "unitName": "POUNDAL",
+        "unitSymbol": "pdl"
+      }
+    ]
+  },
+  {
+    "quantityType": "Width",
+    "supportedUnits": [
+      {
+        "unitName": "METER",
+        "unitSymbol": "m"
+      },
+      {
+        "unitName": "CENTIMETER",
+        "unitSymbol": "cm"
+      },
+      {
+        "unitName": "MILLIMETER",
+        "unitSymbol": "mm"
+      },
+      {
+        "unitName": "KILOMETER",
+        "unitSymbol": "km"
+      },
+      {
+        "unitName": "MILE",
+        "unitSymbol": "mi"
+      },
+      {
+        "unitName": "NAUTICAL_MILE",
+        "unitSymbol": "nmi"
+      },
+      {
+        "unitName": "FEET",
+        "unitSymbol": "ft"
+      },
+      {
+        "unitName": "INCH",
+        "unitSymbol": "in"
+      }
+    ]
+  },
+  {
+    "quantityType": "GeoDistance",
+    "supportedUnits": [
+      {
+        "unitName": "METER",
+        "unitSymbol": "m"
+      },
+      {
+        "unitName": "CENTIMETER",
+        "unitSymbol": "cm"
+      },
+      {
+        "unitName": "MILLIMETER",
+        "unitSymbol": "mm"
+      },
+      {
+        "unitName": "KILOMETER",
+        "unitSymbol": "km"
+      },
+      {
+        "unitName": "MILE",
+        "unitSymbol": "mi"
+      },
+      {
+        "unitName": "NAUTICAL_MILE",
+        "unitSymbol": "nmi"
+      },
+      {
+        "unitName": "FEET",
+        "unitSymbol": "ft"
+      },
+      {
+        "unitName": "INCH",
+        "unitSymbol": "in"
+      }
+    ]
+  },
+  {
+    "quantityType": "SpecificHeat",
+    "supportedUnits": [
+      {
+        "unitName": "JOULES_PER_KILOGRAM_KELVIN",
+        "unitSymbol": "J/(kg·K)"
+      },
+      {
+        "unitName": "KILOJOULES_PER_KILOGRAM_KELVIN",
+        "unitSymbol": "kJ/(kg·K)"
+      },
+      {
+        "unitName": "BTU_PER_POUND_FAHRENHEIT",
+        "unitSymbol": "BTU/(lb·°F)"
+      }
+    ]
+  },
+  {
+    "quantityType": "LocalLossFactor",
+    "supportedUnits": []
+  },
+  {
+    "quantityType": "Length",
+    "supportedUnits": [
+      {
+        "unitName": "METER",
+        "unitSymbol": "m"
+      },
+      {
+        "unitName": "CENTIMETER",
+        "unitSymbol": "cm"
+      },
+      {
+        "unitName": "MILLIMETER",
+        "unitSymbol": "mm"
+      },
+      {
+        "unitName": "KILOMETER",
+        "unitSymbol": "km"
+      },
+      {
+        "unitName": "MILE",
+        "unitSymbol": "mi"
+      },
+      {
+        "unitName": "NAUTICAL_MILE",
+        "unitSymbol": "nmi"
+      },
+      {
+        "unitName": "FEET",
+        "unitSymbol": "ft"
+      },
+      {
+        "unitName": "INCH",
+        "unitSymbol": "in"
+      }
+    ]
+  },
+  {
+    "quantityType": "Mass",
+    "supportedUnits": [
+      {
+        "unitName": "KILOGRAM",
+        "unitSymbol": "kg"
+      },
+      {
+        "unitName": "GRAM",
+        "unitSymbol": "g"
+      },
+      {
+        "unitName": "MILLIGRAM",
+        "unitSymbol": "mg"
+      },
+      {
+        "unitName": "TONNE_SI",
+        "unitSymbol": "t"
+      },
+      {
+        "unitName": "OUNCE",
+        "unitSymbol": "oz"
+      },
+      {
+        "unitName": "POUND",
+        "unitSymbol": "lb"
+      }
+    ]
+  },
+  {
+    "quantityType": "Power",
+    "supportedUnits": [
+      {
+        "unitName": "WATT",
+        "unitSymbol": "W"
+      },
+      {
+        "unitName": "KILOWATT",
+        "unitSymbol": "kW"
+      },
+      {
+        "unitName": "MEGAWATT",
+        "unitSymbol": "MW"
+      },
+      {
+        "unitName": "BTU_PER_HOUR",
+        "unitSymbol": "BTU/h"
+      },
+      {
+        "unitName": "HORSE_POWER",
+        "unitSymbol": "HP"
+      }
+    ]
+  },
+  {
+    "quantityType": "Height",
+    "supportedUnits": [
+      {
+        "unitName": "METER",
+        "unitSymbol": "m"
+      },
+      {
+        "unitName": "CENTIMETER",
+        "unitSymbol": "cm"
+      },
+      {
+        "unitName": "MILLIMETER",
+        "unitSymbol": "mm"
+      },
+      {
+        "unitName": "KILOMETER",
+        "unitSymbol": "km"
+      },
+      {
+        "unitName": "MILE",
+        "unitSymbol": "mi"
+      },
+      {
+        "unitName": "NAUTICAL_MILE",
+        "unitSymbol": "nmi"
+      },
+      {
+        "unitName": "FEET",
+        "unitSymbol": "ft"
+      },
+      {
+        "unitName": "INCH",
+        "unitSymbol": "in"
+      }
+    ]
+  },
+  {
+    "quantityType": "Distance",
+    "supportedUnits": [
+      {
+        "unitName": "METER",
+        "unitSymbol": "m"
+      },
+      {
+        "unitName": "CENTIMETER",
+        "unitSymbol": "cm"
+      },
+      {
+        "unitName": "MILLIMETER",
+        "unitSymbol": "mm"
+      },
+      {
+        "unitName": "KILOMETER",
+        "unitSymbol": "km"
+      },
+      {
+        "unitName": "MILE",
+        "unitSymbol": "mi"
+      },
+      {
+        "unitName": "NAUTICAL_MILE",
+        "unitSymbol": "nmi"
+      },
+      {
+        "unitName": "FEET",
+        "unitSymbol": "ft"
+      },
+      {
+        "unitName": "INCH",
+        "unitSymbol": "in"
+      }
+    ]
+  },
+  {
+    "quantityType": "DynamicViscosity",
+    "supportedUnits": [
+      {
+        "unitName": "KILOGRAM_PER_METER_SECOND",
+        "unitSymbol": "kg/(m·s)"
+      },
+      {
+        "unitName": "PASCAL_SECOND",
+        "unitSymbol": "Pa·s"
+      },
+      {
+        "unitName": "POISE",
+        "unitSymbol": "P"
+      }
+    ]
+  },
+  {
+    "quantityType": "MassFlow",
+    "supportedUnits": [
+      {
+        "unitName": "KILOGRAM_PER_SECOND",
+        "unitSymbol": "kg/s"
+      },
+      {
+        "unitName": "KILOGRAM_PER_HOUR",
+        "unitSymbol": "kg/h"
+      },
+      {
+        "unitName": "TONNE_PER_HOUR",
+        "unitSymbol": "t/h"
+      },
+      {
+        "unitName": "POUND_PER_SECOND",
+        "unitSymbol": "lb/s"
+      }
+    ]
+  }
+]
