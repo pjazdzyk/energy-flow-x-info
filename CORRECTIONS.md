@@ -3,6 +3,31 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-25 · Humid air: thermal conductivity, Prandtl number and thermal diffusivity corrected
+
+The thermal conductivity of humid air was too high, and the error grew with temperature and humidity. The Prandtl
+number was too low and the thermal diffusivity too high by the same share. The mixing rule now follows the published
+Wassiljewa form with the Mason and Saxena factor, built from the pure components' dilute viscosities. It reproduces
+the worked examples of the textbook method. Dry air and the viscosity of humid air did not change.
+
+Thermal conductivity at 101.325 kPa, change against the earlier value:
+
+| State | Change |
+|---|---|
+| 25 °C, 10 g/kg | −1.9 % |
+| 25 °C, 15 g/kg | −2.7 % |
+| 40 °C, 30 g/kg | −5.1 % |
+| 60 °C, 100 g/kg | −12.8 % |
+| 80 °C, 300 g/kg | −22.0 % |
+| 100 °C, 500 g/kg | −24.8 % |
+
+The thermal conductivity of the refrigerant blend R-454B also changed, by about +1 % in the vapour and by less than
+0.15 % in the liquid. The other blends did not change.
+
+These values reach the Humid Air calculator, its property tables, the REST API and the MCP tool
+`get_fluid_properties`. If you used a humid-air conductivity, Prandtl number or thermal diffusivity from before this
+date, especially above 40 °C or 30 g/kg, calculate it again.
+
 ## 2026-10-25 · Heat recovery: frost risk follows the physics, and frost protection solves correctly
 
 Heat recovery frost results changed on the website, the REST API and the MCP server:
