@@ -28,6 +28,27 @@ These values reach the Humid Air calculator, its property tables, the REST API a
 `get_fluid_properties`. If you used a humid-air conductivity, Prandtl number or thermal diffusivity from before this
 date, especially above 40 °C or 30 g/kg, calculate it again.
 
+## 2026-10-25 · Heat recovery: energy books close near a 0 °C exhaust, target modes never claim a missed target, and frost protection stops where frost can no longer form
+
+Heat recovery results changed on the website, the REST API and the MCP server:
+
+- **Energy books near a 0 °C exhaust.** Where the exhaust leaves the exchanger at 0 °C with its condensate freezing
+  only in part, the energy balance now closes. Before, it could be open by up to 1.3 kW.
+- **Target modes.** A supply temperature or recovered power target that the exchanger cannot reach is now reported as
+  not feasible, at the closest value the exchanger delivers and at the lowest rating that delivers it. Before, a target
+  mode with frost protection could report a target as met while missing it by up to 5.6 K, or miss a reachable target.
+- **Frost protection stops where frost can no longer form.** A bypass or preheater now lifts the coldest wall to its
+  trigger or target, or only as far as the wall at which the exhaust vapour stops reaching it, when that is lower. No
+  frost forms past that point. With dry exhaust air the bypass opens less, or the preheater adds less heat, than
+  before, and the outcome reads `PROTECTED` with the wall it reached, which can be below the trigger.
+- **Exact outlet temperatures.** An air stream that leaves the exchanger dry now has its temperature read exactly
+  from its enthalpy and humidity ratio. Reported temperatures moved by up to 0.02 K, and bypass or preheater results
+  by up to about 60 W.
+- **Summer second law.** A sensible exchanger in summer no longer sends an outlet warmer than the hottest inlet.
+
+If you used a heat recovery target mode, a frost protection result with dry exhaust air, or the energy balance of a
+case with the exhaust near 0 °C from before this date, calculate it again.
+
 ## 2026-10-25 · Heat recovery: frost risk follows the physics, and frost protection solves correctly
 
 Heat recovery frost results changed on the website, the REST API and the MCP server:
