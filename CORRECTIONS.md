@@ -3,6 +3,21 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-26 · Natural gas: viscosity and thermal conductivity follow the methane reference
+
+The viscosity and thermal conductivity of natural gas now come from extended corresponding states with methane as
+the reference fluid, using the published methane viscosity of Sotiriadou and co-authors (2025) and the methane
+thermal conductivity of Friend, Ely and Ingham (1989). Pure methane now agrees with both within 0.031 % for
+viscosity and 0.026 % for conductivity. Before, the earlier gas correlations read pure methane up to 12 % high in
+viscosity at 600 K and up to 5 % low in conductivity.
+
+For typical natural gases the change is −10 to +2 % in viscosity and −2 to +5 % in thermal conductivity. A pipe
+carrying a gas of 95 % methane at 10 °C sees its viscosity fall by 1.5 % and its pressure drop by 0.3 %.
+
+These values reach the Natural Gas calculator, its property tables, the REST API, the MCP tool
+`get_natural_gas_properties` and every natural-gas pipe in a network run. If you used a natural-gas viscosity,
+thermal conductivity, Prandtl number or a gas pipe's pressure drop from before this date, calculate it again.
+
 ## 2026-10-25 · Humid air: thermal conductivity, Prandtl number and thermal diffusivity corrected
 
 The thermal conductivity of humid air was too high, and the error grew with temperature and humidity. The Prandtl
