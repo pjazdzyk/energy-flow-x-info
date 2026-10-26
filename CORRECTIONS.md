@@ -3,6 +3,14 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-26 · Heat recovery with a Preheater: a supply target inside the preheater's jump is now met
+
+A heat recovery target mode with a Preheater whose trigger lies below its target (for example -3 / +5 °C) treated the preheater as a switch with no memory. It came on only where the unprotected wall fell below the trigger, and then it lifted the wall straight to its target. So the supply leaving the exchanger jumped at that rating, and a supply target inside the jump could not be met. On the calculator's default network at -15 °C, the supply jumped from about 7.5 to 13.0 °C. A target of 12 °C answered out of reach at 13.0 °C, and a target of 10 °C never settled and ran out of the 30 s limit.
+
+The preheater now behaves like a controller with a differential. Between its trigger and its target, both states are valid. A target mode first looks for the target with the preheater off, then with it held on. On the same network, targets of 10 and 12 °C are now met with the preheater held on. The device says so, and it names the jump and both its sides for a target that still falls inside one, as on an enthalpy core.
+
+Only supply targets inside a preheater's band moved, from out of reach to met. Effectiveness mode, every other target and every other frost strategy give the same answers as before. The change reaches the Heat Recovery calculator, the REST API and the MCP air tool `calculate_air_process`. If you used a Preheater target answer that read out of reach, or that failed with a time limit, calculate it again.
+
 ## 2026-10-26 · Hydraulic network API: a relief valve below its set pressure is shut
 
 In the REST hydraulic network API (`/api/v1/process/hydraulic/solve` and `/report`), a relief regulator below its set
