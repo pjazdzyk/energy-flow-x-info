@@ -3,6 +3,27 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-26 · Hydraulic network API: a relief valve below its set pressure is shut
+
+In the REST hydraulic network API (`/api/v1/process/hydraulic/solve` and `/report`), a relief regulator below its set
+pressure was answered wide open, so the bleed it guards carried a large flow and the network around it was solved
+with that flow. A relief valve below its set pressure is shut and passes only its seat leakage. It now answers so,
+and above its set pressure it holds its set pressure. A relief whose section is not its own two ends is refused with a
+named reason instead of being solved as a pressure controller across that section.
+
+The design builder, which draws relief valves, is not released, and the MCP tools did not solve a relief valve, so
+only a direct call of the REST API with a relief regulator was affected. If you sent one, solve it again.
+
+## 2026-10-26 · Cooling coil, dehumidifier, steam humidifier and compressor: a root search that left its range
+
+Several devices find their outlet by searching for a root inside a known range. The search could step outside that range. Then it either returned a value outside it, or it failed on a request that has an answer. Every root search now stays inside its range, and a coil outlet is checked against the coil before it is reported.
+
+- **Cooling coil and dehumidifier with a target relative humidity a little above the inlet's.** One case returned an outlet colder than the coolant and much too dry, and reported it as feasible. Example: inlet 26.85 °C with 18.55 g/kg, coolant 6.98 / 9.55 °C, target 83.8 %. The outlet came out 21.9 K too cold at 4.34 g/kg, where the right outlet holds 18.17 g/kg. Targets a little higher, such as 84.5, 85 and 90 % on the same inlet, failed with an error. They now answer 17.96, 17.80 and 16.22 g/kg.
+- **Steam humidifier.** Some targets on a valid range failed with an error, and they now answer. Steam added to air colder than about -5 °C, where the fog would settle below the model's liquid range, used to return an outlet that did not conserve energy, sometimes with negative fog. It is now refused with a reason.
+- **Compressor with a fluid from the registry.** Some discharge states failed, or came from a search that had not settled. They now answer. One example is dry air from 1.12 bar and 31.5 °C to 2.18 bar, which reported no power and now gives 369.25 kJ/kg. A discharge exactly at a phase change is answered from the side that meets it.
+
+Every other answer is unchanged, to the last digit, on our reference sets. The service does not store calculator results. A value you copied from the Cooling, Dehumidification, Steam Humidification or compressor calculations, the REST API or the MCP air tools before this date, for one of the cases above, should be calculated again.
+
 ## 2026-10-26 · Natural gas: viscosity and thermal conductivity follow the methane reference
 
 The viscosity and thermal conductivity of natural gas now come from extended corresponding states with methane as
