@@ -3,6 +3,18 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-27 · Hydraulic networks: an answer that cannot be used no longer reads converged
+
+A hydraulic solve reported `converged: true` and `status: CONVERGED` whenever its numerical iteration settled, even when the answer it settled on could not be used. Three cases:
+
+- **Flow targets that cannot all be met.** In the REST hydraulic network API (`/api/v1/process/hydraulic/solve` and `/report`), a design with two or more flow targets ran a fixed number of sweeps and returned the last one as converged, with a target missed. Example: two targets on series runs that read the same demands, 105 m³/h asked and 118.9 m³/h delivered, a miss of 13.2 %. It now answers not converged with `TARGETS_MISSED` and names each missed target. A single target whose search closes on a jump of the flow is treated the same way.
+- **A state that does not exist.** A node at or below zero absolute pressure, or a liquid that boils at the pressure it was solved at, read `CONVERGED` with warnings beside it. Example: two parallel pipes asked for 15 kg/s solved to -831.6 kPa absolute. It now reads `NOT_PHYSICAL`, over MCP and REST alike, and REST lists the phase problems as MCP does.
+- **A balance that missed its targets.** A Hydronic balance whose valves could not reach their design flows read `CONVERGED`. It now reads `TARGETS_MISSED`, with the misses listed.
+
+In every case `converged` is now true exactly when `status` is `CONVERGED`, and the solver's own result is kept in `solverStatus`. No number moved. If you relied on a converged answer from one of the cases above, solve it again and read `status`.
+
+In the same release, Hydronic sizing stopped calling a run infeasible when it missed only a minimum velocity that no size of its series reaches, or reaches only by breaking a ceiling. The size it chose is unchanged. The reply now says which of the two it is.
+
 ## 2026-10-26 · Heat recovery with a Preheater: a supply target inside the preheater's jump is now met
 
 A heat recovery target mode with a Preheater whose trigger lies below its target (for example -3 / +5 °C) treated the preheater as a switch with no memory. It came on only where the unprotected wall fell below the trigger, and then it lifted the wall straight to its target. So the supply leaving the exchanger jumped at that rating, and a supply target inside the jump could not be met. On the calculator's default network at -15 °C, the supply jumped from about 7.5 to 13.0 °C. A target of 12 °C answered out of reach at 13.0 °C, and a target of 10 °C never settled and ran out of the 30 s limit.
