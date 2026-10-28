@@ -3,6 +3,16 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-28 · Hydronic design and balance: valve dials chosen for the radiators' output
+
+A balanced heating design rounded each radiator valve's setting to the nearest dial position. Under a pump with head to spare, rounding down left radiators short of their output: in a six-radiator test circuit two read 5.2 to 5.7 % short, and with a 5 % emitter margin three read 5.1 to 8.4 % short, so the design failed its own emitter check. The report's headline still said every run and node met its criteria.
+
+A valve whose rounded dial would leave its radiator short of the output it must give is now set one position up, predicted from the radiator's own law and checked with a solve. Only a radiator still in deficit after that gets further raises, and a raise stops when more flow no longer adds output. Then the reply names the remedy, a larger radiator or a warmer supply. The same choice is made by the Hydronic MCP balance and by the REST report. The report headline states the design validation verdict, and a radiator in deficit at its dials reads `TARGETS_MISSED`.
+
+Dials, flows and outputs of balanced heating designs moved. If you used a balance or design whose validation read FAIL on emitter output, or a REST report's commissioning sheet, balance it again.
+
+In the same release, a run over time's sampled table and chart show each interval's lowest and highest value, so a cycle as long as the row spacing no longer reads as a slow trend, and an unloaded compressor no longer passes air backwards or warns that it does.
+
 ## 2026-10-27 · Hydraulic networks: an answer that cannot be used no longer reads converged
 
 A hydraulic solve reported `converged: true` and `status: CONVERGED` whenever its numerical iteration settled, even when the answer it settled on could not be used. Three cases:
