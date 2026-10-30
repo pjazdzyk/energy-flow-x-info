@@ -3,6 +3,17 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-30 · Fluid density: a pure fluid near its saturation line now returns the stable phase
+
+The density of a pure fluid below its critical temperature is found by solving its equation of state for the density that gives the stated pressure. Near the saturation line that equation has two physical roots, liquid and vapour, and the solver could return the wrong one with no warning:
+
+- **Compressed liquid returned as vapour.** Just above the saturation pressure, the solver slid onto the vapour root and never looked for the liquid. Nitrogen at -183.16 °C (89.99 K) and 3.96 bar read 16.8 kg/m³; the liquid there is 745 kg/m³. Hydrogen at 15 K and 0.3 bar read 0.514 kg/m³ instead of 76.2. Propane, methane and R-1234ze(E) showed the same at a few states each.
+- **A root inside the two-phase region.** Close to the saturation pressure the solver could accept a density that lies inside the two-phase region, which is neither phase. Argon at 138.251 K and 29.38 bar read 514.5 kg/m³, labelled vapour; the vapour there is 161.6 kg/m³.
+
+The solver now finds the vapour root and the liquid root each on its own branch, checks that each belongs to its phase, and returns the one that is stable. In a check over 45,000 states of all pure fluids, the 156 that changed were all wrong before, and every other state is unchanged to the last digit. Mixtures (refrigerant blends and natural gas) use a different path and did not change.
+
+This reaches every property of the pure industrial gases and pure refrigerants that depends on density (enthalpy, entropy, heat capacities, speed of sound, viscosity, conductivity), in the fluid property calculators, the property tables, the REST API, the MCP tools `get_fluid_properties` and `get_property_table`, and Hydronic networks that carry a pure fluid. If you used a pure fluid's properties within a few percent of its saturation pressure, calculate them again.
+
 ## 2026-10-30 · Fluid transport properties: cold nitrous oxide gas, and R-1234yf and R-32 near their triple points
 
 **Nitrous oxide gas below about -55 °C.** Its viscosity and thermal conductivity are computed by mapping each state onto nitrogen. For cold gas that mapping has no exact solution, and the solve returned a diverged state instead of saying so. Viscosity came out two to four times too high, and at some states thousands of times: at -59 °C and 4 bar it read 0.173 Pa·s, at -70 °C and 1 bar 2.09e-5 Pa·s, and on the saturated vapour at -60 °C 2.35 Pa·s. The gas there has a viscosity of about 1.0e-5 Pa·s. The mapping now accepts only a converged, physically valid state and otherwise uses the low-density form the method publishes. The examples now read 1.08e-5, 1.01e-5 and 1.08e-5 Pa·s. Liquid and supercritical nitrous oxide did not change, and warmer gas changed by less than 1 %.
