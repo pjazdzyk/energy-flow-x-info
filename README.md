@@ -91,7 +91,7 @@ The validity ranges of the process gases, cryogens and refrigerants:
 | R-134a | −103 to 181 °C, up to 40 MPa |
 | R-1234ze(E) | −104 to 146 °C, up to 100 MPa |
 | R-1234yf | −53 to 136 °C, up to 30 MPa |
-| R-32 | −23 to 146 °C, up to 30 MPa |
+| R-32 | −136.8 to 146 °C, up to 30 MPa |
 | R-125 | −43 to 166 °C, up to 20 MPa |
 | R-410A, R-407C, R-454B | −73 to 146 °C, up to 35 MPa |
 

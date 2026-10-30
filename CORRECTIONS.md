@@ -3,6 +3,19 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-30 · Humid air, R-32 and R-454B, helium and steam: property corrections
+
+**Humid air.** Its properties are now derived from one description of the mixture, the same one its enthalpy already used. Before, the entropy left out the air-water interaction term the enthalpy carried, the density came from a different formula, and the heat capacity at constant volume subtracted a gas constant on a different mass basis than the one it was subtracted from. As a result moist air read a lower speed of sound than dry air, where it is higher. At 1 atm the heat capacity at constant volume moves by 0.3 to 1 %, the ratio of heat capacities and the speed of sound by 0.1 to 1 % (25 °C at 55 % RH: speed of sound up 0.30 %), and the density by a few parts per million. Enthalpy, heat capacity at constant pressure, wet bulb and dew point did not change. At high pressure the moves are larger (at 5 MPa density up to 1 %, entropy up to 8 J/(kg·K)). Air at zero humidity now gives the dry-air values exactly: at 5 MPa and -45 °C its heat capacity at constant volume read 894 J/(kg·K) and is 742.
+In fog (more water than the air can hold as vapour), the heat capacity at constant pressure now includes the evaporation of the suspended water: at 20 °C and a humidity ratio of 0.02 it reads 3.35 kJ/(kg·K), where it read 1.06. Properties that are not defined for a two-phase state (heat capacity at constant volume, speed of sound, compressibility factor and the compressibilities) are now refused with the reason, where they read values that could be negative. Dry air now has a wet bulb (5.81 °C at 1 atm and 20 °C), and its dew point is refused, since it has no water vapour.
+
+**R-32 and R-454B thermal conductivity.** R-32 conductivity is now given from its triple point (-136.8 °C), where it was refused below -23.15 °C. Below 250 K the dense part follows a published correlation and the dilute-gas part a standard kinetic-theory shape anchored to our fit at 250 K, joined smoothly to the fit, which is unchanged from 250 K up. R-454B, which takes R-32's dilute-gas term, moved below 250 K: its vapour conductivity is up to 5.6 % lower at 200 K, its liquid up to 0.23 %. R-454B, R-410A and R-407C transport below their component correlations' lower limits (220, 250 and 250 K) now carries a warning.
+
+**Helium** thermal conductivity, thermal diffusivity and Prandtl number are refused above 100 MPa, beyond the stated validity of the correlation, which turns negative at high pressure.
+
+**Steam** given by enthalpy and entropy near freezing, and steam below the triple-point pressure (611.2 Pa), now answer where they were refused.
+
+These reach the fluid property calculators, the property tables, the air-process calculators, the REST API and the MCP tools `get_fluid_properties`, `get_saturation_properties`, `get_property_table` and `calculate_air_process`. If you used a speed of sound, heat capacity ratio or compressibility of humid air, a property of fog, or an R-454B vapour conductivity below -23 °C, calculate it again.
+
 ## 2026-10-30 · Fluid density: a pure fluid near its saturation line now returns the stable phase
 
 The density of a pure fluid below its critical temperature is found by solving its equation of state for the density that gives the stated pressure. Near the saturation line that equation has two physical roots, liquid and vapour, and the solver could return the wrong one with no warning:
