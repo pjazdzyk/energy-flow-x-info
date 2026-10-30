@@ -3,6 +3,14 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-31 · Hydronic runs over time: every step closes its vessel balance, or says it did not
+
+A run over time solves each time step implicitly: the pressure of each vessel (an expansion vessel, a receiver, a tank) at the end of the step must agree with the flow into it over the step. Near a source's pressure, where the driving pressure is small, and in stiff steps, the solver could end a step without that balance closing. It warned that steps did not close, and the run went on from a state off the true answer by up to 12 kPa in a test run. With two or more vessels, an intermediate fix could even report such steps as closed.
+
+A step now counts as closed only at a solve where every vessel's balance is within its tolerance, and the step commits that solve. Several vessels are closed together. A step that still cannot close is named in the warning. In test sets of air receivers and expansion vessels, every run that had unclosed steps now closes them, and runs that closed before are unchanged with one vessel and move by at most 1.1 Pa with several.
+
+If you used a run over time whose reply warned that steps did not close their implicit balance, its pressures, flows and vessel trajectories moved. Run it again.
+
 ## 2026-10-30 · Humid air, R-32 and R-454B, helium and steam: property corrections
 
 **Humid air.** Its properties are now derived from one description of the mixture, the same one its enthalpy already used. Before, the entropy left out the air-water interaction term the enthalpy carried, the density came from a different formula, and the heat capacity at constant volume subtracted a gas constant on a different mass basis than the one it was subtracted from. As a result moist air read a lower speed of sound than dry air, where it is higher. At 1 atm the heat capacity at constant volume moves by 0.3 to 1 %, the ratio of heat capacities and the speed of sound by 0.1 to 1 % (25 °C at 55 % RH: speed of sound up 0.30 %), and the density by a few parts per million. Enthalpy, heat capacity at constant pressure, wet bulb and dew point did not change. At high pressure the moves are larger (at 5 MPa density up to 1 %, entropy up to 8 J/(kg·K)). Air at zero humidity now gives the dry-air values exactly: at 5 MPa and -45 °C its heat capacity at constant volume read 894 J/(kg·K) and is 742.
