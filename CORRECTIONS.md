@@ -3,6 +3,12 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-30 · Hydronic design: a dial raise that does not help is undone, and a stated margin is met
+
+Since 2026-10-28 a design raised the valve of a radiator short of its output one dial position at a time. When the radiator was too small for its supply, the raise was judged ineffective and still kept, so the circuit took more flow and its return ran warmer, while the radiator stayed short. A raise that does not lower the shortfall is now undone, and the reply names the remedy, a larger radiator or a warmer supply. And with an emitter margin stated, the dials now aim at the margined output, so a 5 % margin is delivered instead of being absorbed by the validation line.
+
+Dials, flows and outputs of designs with a radiator too small for its supply, or with a stated emitter margin, moved. Balance such a design again.
+
 ## 2026-10-28 · Hydronic design and balance: valve dials chosen for the radiators' output
 
 A balanced heating design rounded each radiator valve's setting to the nearest dial position. Under a pump with head to spare, rounding down left radiators short of their output: in a six-radiator test circuit two read 5.2 to 5.7 % short, and with a 5 % emitter margin three read 5.1 to 8.4 % short, so the design failed its own emitter check. The report's headline still said every run and node met its criteria.
