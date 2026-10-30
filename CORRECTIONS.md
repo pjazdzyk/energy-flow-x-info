@@ -3,6 +3,12 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-31 · Humid air in fog: the partial pressure of water vapour
+
+In fog (more water than the air can hold as vapour) the partial pressure of water vapour was computed from all the water, the condensed droplets included, so it read above the saturation pressure, which no vapour can exceed. At 1 atm and 20 °C with a humidity ratio of 20 g/kg it read 3.156 kPa, where the vapour's partial pressure is 2.349 kPa, and the error grew with the amount of water: at 1 kg/kg it read 62.5 kPa. Only the vapour exerts a partial pressure, so in fog it is now the saturated value at the state, however much water is suspended, and it joins the unsaturated values smoothly at saturation. No other property changed: every other humid-air property already used the saturated vapour in fog, and air below saturation is unchanged to the last digit.
+
+This reaches the humid air calculator, the property tables, the REST API and the MCP tools `get_fluid_properties` and `get_property_table`. If you used the water vapour partial pressure of fog, read it again.
+
 ## 2026-10-31 · Hydronic runs over time: every step closes its vessel balance, or says it did not
 
 A run over time solves each time step implicitly: the pressure of each vessel (an expansion vessel, a receiver, a tank) at the end of the step must agree with the flow into it over the step. Near a source's pressure, where the driving pressure is small, and in stiff steps, the solver could end a step without that balance closing. It warned that steps did not close, and the run went on from a state off the true answer by up to 12 kPa in a test run. With two or more vessels, an intermediate fix could even report such steps as closed.
