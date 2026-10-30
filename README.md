@@ -198,7 +198,7 @@ Then run `/mcp`, pick `energy-flow-x` and choose **Authenticate**. The same repo
 **What the tools do, in plain words:**
 
 - **Fluid properties** (`get_fluid_properties`, `get_saturation_properties`, `get_natural_gas_properties`, `get_solid_properties`, `list_fluids`). Any property at a state, saturation points, natural gas with calorific value and Wobbe index, and ice. Sweeps of several states in one call.
-- **Property tables** (`get_property_table`, members server). The web calculators' tables over MCP: a range, the saturation line or a grid, up to 5000 states in one call, with a CSV link for a large table.
+- **Property tables** (`get_property_table`, members server). The web calculators' tables over MCP: a range, the saturation line or a grid, up to 1000 states in one call, with a CSV link for a large table.
 - **Units** (`convert_units`). Conversion, and the symbols each quantity accepts.
 - **Pipes and ducts** (`search_conduit_catalog`, `get_conduit_dimensions`, `size_conduit`, `select_conduit_size`). The catalogue and its size tables, the hydraulics of one pipe or duct, and the size to choose against stated criteria: the smallest that passes, the size below and why it fails, and the size above.
 - **Air handling** (`calculate_air_process`). One block or a chain of up to eight from nine blocks: heating and cooling coils, mixing, heat recovery, fan, steam humidifier (members), air-water contact, dehumidification and desiccant wheel. A target a step cannot reach is reported as not feasible.
@@ -212,7 +212,7 @@ The eleven free tools are read-only and idempotent. Inputs carry their units as 
 
 [<img src="assets/images/table-generation-feature.png" alt="Property table generation" style="width:100%;">](https://energyflowx.com)
 
-- **Property tables** (free account). Any supported fluid tabulated over a varying parameter, with fixed parameters held constant, selectable columns and significant digits, exported to CSV. The 14 fluids with a vapour-liquid dome also tabulate their saturation line, by temperature or by pressure, with both phases and the latent heat on every row. A second range over a fixed input makes a grid, up to 5000 states in one request, exported as one CSV.
+- **Property tables** (free account). Any supported fluid tabulated over a varying parameter, with fixed parameters held constant, selectable columns and significant digits, exported to CSV. The 14 fluids with a vapour-liquid dome also tabulate their saturation line, by temperature or by pressure, with both phases and the latent heat on every row. A second range over a fixed input makes a grid of up to 10 tables and 500 states, exported as one CSV.
 - **Knowledge base.** Every calculator has a documentation page: the physical model, how to drive the calculator, identity and safety data, validity ranges and a cited sources panel. The whole set is at [energyflowx.com/knowledge](https://energyflowx.com/knowledge), and longer pieces are at [energyflowx.com/articles](https://energyflowx.com/articles).
 - **Comparison report.** The engine output is set beside published reference values, group by group, with the differences shown, at [energyflowx.com/reports/validation](https://energyflowx.com/reports/validation).
 - **Reference comparisons you can run.** The solar comparisons are published in this repository with their scenes, scripts and data, in [reference-comparisons](reference-comparisons).
