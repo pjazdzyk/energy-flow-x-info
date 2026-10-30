@@ -16,6 +16,24 @@ In fog (more water than the air can hold as vapour), the heat capacity at consta
 
 These reach the fluid property calculators, the property tables, the air-process calculators, the REST API and the MCP tools `get_fluid_properties`, `get_saturation_properties`, `get_property_table` and `calculate_air_process`. If you used a speed of sound, heat capacity ratio or compressibility of humid air, a property of fog, or an R-454B vapour conductivity below -23 °C, calculate it again.
 
+## 2026-10-30 · Hydronic: a design or balance stopped by its time limit no longer reads as a pass
+
+A design run chooses each radiator valve's dial and resizes runs in passes, and a light air network call searches for its target flows. These searches were bounded partly by computing time. On a busy server a search could stop early and still answer CONVERGED, with a validation that read as a pass beside a radiator left short of its output. In a test circuit one radiator read 3.5 % short this way, while the same request on a quiet machine met every output.
+
+The searches are now bounded by a count of work, so the same request gives the same answer whatever the load. Where the time limit still stops a run, the reply says so: the status reads TARGETS_MISSED, the design validation reads INCOMPLETE and names each radiator or run left unmet, and the report's headline says it is not the design's answer. A light air calculation that runs past 30 s is refused with a sentence on how to ask again, never answered with numbers cut short. This applies to `hydronic_solve`, `hydronic_report` and the REST design, balance and report endpoints.
+
+If you used a design or balance whose status read CONVERGED during a busy period and a radiator later read short, run it again.
+
+## 2026-10-30 · Hydronic over REST: a run over time now holds its regulators
+
+A REST run over time on a design with pressure-independent control valves, differential pressure controllers, constant air volume dampers or pressure regulators solved the network with those elements at a fixed resistance. The regulators were ignored without a word. They are now held at every step, as in a steady solve, and the reply states the regulation band (5 % by default). Over MCP the same run was refused before and now runs.
+
+If you used a REST run over time with regulators in the network, its flows, pressures and vessel trajectories moved. Run it again.
+
+## 2026-10-30 · Hydronic and air processes: humid air with the corrected fluid properties
+
+The humid air corrections of the same day (heat capacity at constant volume, speed of sound and compressibility, and air with fog) reach Hydronic ventilation networks and the air treatment processes. Pressure losses and flows of humid air ducts moved by a few parts per million through the density. In a compressed humid air network whose air holds more water than it can carry as vapour (fog), the speed of sound is no longer reported, because it is not defined there. Air treatment results moved where they read a heat capacity in fog.
+
 ## 2026-10-30 · Fluid density: a pure fluid near its saturation line now returns the stable phase
 
 The density of a pure fluid below its critical temperature is found by solving its equation of state for the density that gives the stated pressure. Near the saturation line that equation has two physical roots, liquid and vapour, and the solver could return the wrong one with no warning:
