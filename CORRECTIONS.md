@@ -3,6 +3,14 @@
 Corrections that changed a result a user may have relied on, newest first. Open defects are listed on
 [energyflowx.com/known-issues](https://energyflowx.com/known-issues) until they are fixed.
 
+## 2026-10-30 · Fluid transport properties: cold nitrous oxide gas, and R-1234yf and R-32 near their triple points
+
+**Nitrous oxide gas below about -55 °C.** Its viscosity and thermal conductivity are computed by mapping each state onto nitrogen. For cold gas that mapping has no exact solution, and the solve returned a diverged state instead of saying so. Viscosity came out two to four times too high, and at some states thousands of times: at -59 °C and 4 bar it read 0.173 Pa·s, at -70 °C and 1 bar 2.09e-5 Pa·s, and on the saturated vapour at -60 °C 2.35 Pa·s. The gas there has a viscosity of about 1.0e-5 Pa·s. The mapping now accepts only a converged, physically valid state and otherwise uses the low-density form the method publishes. The examples now read 1.08e-5, 1.01e-5 and 1.08e-5 Pa·s. Liquid and supercritical nitrous oxide did not change, and warmer gas changed by less than 1 %.
+
+**R-1234yf and R-32 at their coldest states.** Two R-1234yf correlations were evaluated below the 220 K their sources state, and they cross zero near 126 K. Saturated vapour near the triple point read a negative viscosity (-2.8e-7 Pa·s at 123 K) and a negative conductivity, and values up to about 160 K were far too low. The R-32 liquid conductivity was evaluated below the 250 K its fit covers and fell as the liquid cooled, the wrong direction (0.141 W/(m·K) at 137 K against 0.203 at 186 K). Point calculations already refused below those limits, the saturation and pressure-temperature tables did not. A table row below a limit now leaves out that column and keeps every other property. Values above the limits are unchanged.
+
+These reach the fluid property calculators, the property tables, the REST API and the MCP tools `get_fluid_properties`, `get_saturation_properties` and `get_property_table`. If you used a viscosity, conductivity, Reynolds or Prandtl number of nitrous oxide gas below about -55 °C, or of R-1234yf or R-32 near their triple points, calculate it again.
+
 ## 2026-10-30 · Hydronic design: a dial raise that does not help is undone, and a stated margin is met
 
 Since 2026-10-28 a design raised the valve of a radiator short of its output one dial position at a time. When the radiator was too small for its supply, the raise was judged ineffective and still kept, so the circuit took more flow and its return ran warmer, while the radiator stayed short. A raise that does not lower the shortfall is now undone, and the reply names the remedy, a larger radiator or a warmer supply. And with an emitter margin stated, the dials now aim at the margined output, so a 5 % margin is delivered instead of being absorbed by the validation line.
