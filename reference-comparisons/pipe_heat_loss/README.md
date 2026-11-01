@@ -65,9 +65,17 @@ python3 -I pipe_heat_loss_reference.py
 
 It needs Python 3 and nothing else (run here with 3.12). It prints the table below and writes
 `expected_figures.json`, which holds the reference value, the recorded server value and the gap for each
-figure. The server values are recorded in the script. To re-run the server side, post the files in
-[requests](requests) to the Hydronic solve of the REST API with your account's key and read the heat loss of
-the run `main`, or build the same design in a Hydronic session and read `data.thermal.distribution`.
+figure. The server values are recorded in the script. To get the server side yourself, build the same design in a
+Hydronic session on the members MCP server and read `data.thermal.distribution` of `hydronic_solve`. The ops
+are `add_zone` (the air temperature, the wind speed and for case C the schedule), `define_material` (the steel and
+the wool with their conductivity points and emissivity), `define_insulation` (the 40 mm wool layer), and for the
+run its `zone`, `wallThickness`, `wallMaterial` and `insulation` settings. The files in [requests](requests) are the
+same designs as REST request bodies, which is the form the product's own tests use.
+
+**Record of this run.** Reference script run on 2026-11-01 with Python 3.12.3. Water rows: the IAPWS
+formulations, evaluated at 0.2 MPa on 2026-11-01. Server column: the answers of the Hydronic solve, build
+carrying pipe heat loss, to the three request files, recorded the same day. The version of the build is in the
+header of every REST reply and in every MCP reply.
 
 ## 4. Result
 
