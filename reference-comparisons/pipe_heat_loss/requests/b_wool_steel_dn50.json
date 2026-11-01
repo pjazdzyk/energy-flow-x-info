@@ -1,0 +1,136 @@
+{
+  "fluid": {
+    "kind": "WATER"
+  },
+  "nodes": [
+    {
+      "kind": "AMBIENT",
+      "id": "supply",
+      "pressure": {
+        "value": 200300,
+        "unit": "Pa"
+      },
+      "temperature": {
+        "value": 70,
+        "unit": "oC"
+      }
+    },
+    {
+      "kind": "FIXED_PRESSURE",
+      "id": "sink",
+      "pressure": {
+        "value": 200000,
+        "unit": "Pa"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "kind": "PIPE",
+      "id": "main",
+      "fromId": "supply",
+      "toId": "sink",
+      "geometry": {
+        "shape": "CIRCULAR",
+        "innerDiameter": {
+          "value": 52.5,
+          "unit": "mm"
+        },
+        "roughness": {
+          "value": 0.045,
+          "unit": "mm"
+        }
+      },
+      "length": {
+        "value": 20,
+        "unit": "m"
+      },
+      "zone": "room",
+      "wall": {
+        "material": "own:steel",
+        "thickness": {
+          "value": 3.9,
+          "unit": "mm"
+        }
+      },
+      "insulation": [
+        {
+          "material": "own:wool",
+          "thickness": {
+            "value": 40,
+            "unit": "mm"
+          }
+        }
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "id": "room",
+      "airTemperature": {
+        "value": 20,
+        "unit": "oC"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "id": "steel",
+      "name": "Steel",
+      "conductivity": [
+        {
+          "temperature": {
+            "value": 20,
+            "unit": "oC"
+          },
+          "value": {
+            "value": 50,
+            "unit": "W/(m·K)"
+          }
+        }
+      ],
+      "emissivity": 0.85
+    },
+    {
+      "id": "wool",
+      "name": "Wool",
+      "conductivity": [
+        {
+          "temperature": {
+            "value": 20,
+            "unit": "oC"
+          },
+          "value": {
+            "value": 0.037,
+            "unit": "W/(m·K)"
+          }
+        },
+        {
+          "temperature": {
+            "value": 50,
+            "unit": "oC"
+          },
+          "value": {
+            "value": 0.042,
+            "unit": "W/(m·K)"
+          }
+        },
+        {
+          "temperature": {
+            "value": 100,
+            "unit": "oC"
+          },
+          "value": {
+            "value": 0.052,
+            "unit": "W/(m·K)"
+          }
+        }
+      ],
+      "emissivity": 0.9
+    }
+  ],
+  "solver": {
+    "kind": "STEADY",
+    "temperatureK": 343.15
+  }
+}

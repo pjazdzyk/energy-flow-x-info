@@ -17,6 +17,7 @@ pvlib) are used for comparison only and are not affiliated with EnergyFlowX.
 | [ifc_lens](ifc_lens/solar_module) | Solar, geometry | Direct sun hours compared with Ladybug Tools on a controlled box scene: 6 of 7 points identical, 1 differs by one 5 minute sample | yes, re-run on every commit |
 | [ifc_lens](ifc_lens/solar_module/clear_sky_irradiation) | Solar, irradiation | Annual clear sky irradiation compared with PVGIS, a different clear sky model: within 2.8 % at three sites, and our clarity band brackets the PVGIS value | yes, re-run on every commit |
 | [ifc_lens](ifc_lens/solar_module/row_shading) | PV, shading | Ray-traced inter-row shading compared with a closed form for the one geometry that has one: the residual falls with finer sampling toward a floor set by the panel's own thickness | yes, re-run on every commit |
+| [pipe_heat_loss](pipe_heat_loss) | Hydronic, pipe heat loss | Heat loss of a bare and an insulated steel run in still air and of a scheduled outdoor run, compared with a separate calculation from the published film correlations: within 0.33 % of the loss and 0.08 K of the outlet | no, re-run the script |
 
 More modules and tools will be added here as they mature.
 
