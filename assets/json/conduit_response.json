@@ -1,0 +1,154 @@
+{
+  "processType": "CONDUIT_FLOW",
+  "conduitStructureData": {
+    "conduitShape": "RECTANGULAR",
+    "innerPerimeter": {
+      "value": 1,
+      "unit": "m"
+    },
+    "innerSectionArea": {
+      "value": 0.06,
+      "unit": "m²"
+    },
+    "outerPerimeter": {
+      "value": 1.4064,
+      "unit": "m"
+    },
+    "outerSectionArea": {
+      "value": 0.12112256000000002,
+      "unit": "m²"
+    },
+    "equivHydraulicDiameter": {
+      "value": 0.24,
+      "unit": "m"
+    },
+    "baseLinearMassDensity": {
+      "value": 6.30009600000006,
+      "unit": "kg/m"
+    },
+    "totalLinearMassDensity": {
+      "value": 11.125696000000062,
+      "unit": "kg/m"
+    },
+    "innerWidth": {
+      "value": 300,
+      "unit": "mm"
+    },
+    "innerHeight": {
+      "value": 200,
+      "unit": "mm"
+    },
+    "outerWidth": {
+      "value": 401.6,
+      "unit": "mm"
+    },
+    "outerHeight": {
+      "value": 301.6,
+      "unit": "mm"
+    }
+  },
+  "inletAirFlow": {
+    "massFlow": {
+      "value": 0.6286546156432368,
+      "unit": "kg/s"
+    },
+    "dryAirMassFlow": {
+      "value": 0.6196892454551051,
+      "unit": "kg/s"
+    },
+    "volumetricFlow": {
+      "value": 2059.627391028979,
+      "unit": "m³/h"
+    },
+    "humidAir": {
+      "dryBulbTemperature": {
+        "value": 40.73538520380806,
+        "unit": "°C"
+      },
+      "absolutePressure": {
+        "value": 101325,
+        "unit": "Pa"
+      },
+      "density": {
+        "value": 1.0988184689003337,
+        "unit": "kg/m³"
+      },
+      "relativeHumidity": {
+        "value": 30.00000000000022,
+        "unit": "%"
+      },
+      "humidityRatio": {
+        "value": 0.014467525867013206,
+        "unit": "kg/kg"
+      },
+      "specificHeat": {
+        "value": 1.0327211621880463,
+        "unit": "kJ/(kg·K)"
+      },
+      "specificEnthalpy": {
+        "value": 78.25010508013354,
+        "unit": "kJ/kg"
+      }
+    }
+  },
+  "outletAirFlow": {
+    "massFlow": {
+      "value": 0.6286546156432368,
+      "unit": "kg/s"
+    },
+    "dryAirMassFlow": {
+      "value": 0.6196892454551051,
+      "unit": "kg/s"
+    },
+    "volumetricFlow": {
+      "value": 2059.7012997451307,
+      "unit": "m³/h"
+    },
+    "humidAir": {
+      "dryBulbTemperature": {
+        "value": 40.73538520380806,
+        "unit": "°C"
+      },
+      "absolutePressure": {
+        "value": 101321.36413267063,
+        "unit": "Pa"
+      },
+      "density": {
+        "value": 1.0987790397547923,
+        "unit": "kg/m³"
+      },
+      "relativeHumidity": {
+        "value": 29.998923503381608,
+        "unit": "%"
+      },
+      "humidityRatio": {
+        "value": 0.014467525867013206,
+        "unit": "kg/kg"
+      },
+      "specificHeat": {
+        "value": 1.0327211621880463,
+        "unit": "kJ/(kg·K)"
+      },
+      "specificEnthalpy": {
+        "value": 78.25010508013354,
+        "unit": "kJ/kg"
+      }
+    }
+  },
+  "length": {
+    "value": 1,
+    "unit": "m"
+  },
+  "volume": {
+    "value": 60,
+    "unit": "dm³"
+  },
+  "velocity": {
+    "value": 9.535311995504534,
+    "unit": "m/s"
+  },
+  "linearPressureLoss": {
+    "value": 3.6358673293735153,
+    "unit": "Pa"
+  }
+}

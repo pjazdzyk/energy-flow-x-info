@@ -1,0 +1,92 @@
+{
+  "processType": "MIXING",
+  "processMode": "SIMPLE_MIXING",
+  "dryAirMassFreshAirRatio": {
+    "value": 36.42405655810528,
+    "unit": "%"
+  },
+  "humidAirVolFreshAirRatio": {
+    "value": 33.3338568386046,
+    "unit": "%"
+  },
+  "outletAirFlow": {
+    "outletMassFlow": {
+      "value": 10.638934361288483,
+      "unit": "kg/s"
+    },
+    "outletDryAirMassFlow": {
+      "value": 10.615301556446852,
+      "unit": "kg/s"
+    },
+    "outletvolumetricFlow": {
+      "value": 29999.528852655298,
+      "unit": "m³/h"
+    },
+    "humidAir": {
+      "vapourState": "UNSATURATED",
+      "dryBulbTemperature": {
+        "value": 2.3017074509397193,
+        "unit": "°C"
+      },
+      "absolutePressure": {
+        "value": 101325,
+        "unit": "Pa"
+      },
+      "density": {
+        "value": 1.2766921736922057,
+        "unit": "kg/m³"
+      },
+      "relativeHumidity": {
+        "value": 50.102342258665956,
+        "unit": "%"
+      },
+      "saturationPressure": {
+        "value": 721.3219493848501,
+        "unit": "Pa"
+      },
+      "humidityRatio": {
+        "value": 0.002226296136380328,
+        "unit": "kg/kg"
+      },
+      "maxHumidityRatio": {
+        "value": 0.004459394311651876,
+        "unit": "kg/kg"
+      },
+      "wetBulbTemperature": {
+        "value": -1.1136291672665097,
+        "unit": "°C"
+      },
+      "dewPointTemperature": {
+        "value": -7.025398244924601,
+        "unit": "°C"
+      },
+      "specificHeat": {
+        "value": 1.0078704124270528,
+        "unit": "kJ/(kg·K)"
+      },
+      "specificEnthalpy": {
+        "value": 7.887566845338594,
+        "unit": "kJ/kg"
+      },
+      "dynamicViscosity": {
+        "value": 1.7169558356940566E-5,
+        "unit": "kg/(m·s)"
+      },
+      "kinematicViscosity": {
+        "value": 1.344847153506553E-5,
+        "unit": "m²/s"
+      },
+      "thermalConductivity": {
+        "value": 0.024617556974950036,
+        "unit": "W/(m·K)"
+      },
+      "thermalDiffusivity": {
+        "value": 1.9131721913134164E-5,
+        "unit": "m²/s"
+      },
+      "prandtlNumber": {
+        "value": 0.7029409896363268
+      }
+    }
+  }
+}

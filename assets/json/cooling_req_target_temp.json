@@ -1,0 +1,41 @@
+{
+  "processType": "COOLING",
+  "processMode": "FROM_TEMPERATURE",
+  "processFlowMode": "FROM_INLET_VOL_FLOW",
+  "targetTemperature": {
+    "value": 25,
+    "unit": "oC"
+  },
+  "coolantData": {
+    "supplyTemperature": {
+      "value": 7,
+      "unit": "oC"
+    },
+    "returnTemperature": {
+      "value": 14,
+      "unit": "oC"
+    }
+  },
+  "airFlowData": {
+    "pressure": {
+      "value": 101325.0,
+      "unit": "Pa"
+    },
+    "temperature": {
+      "value": 35,
+      "unit": "oC"
+    },
+    "relativeHumidity": {
+      "value": 55,
+      "unit": "%"
+    },
+    "volumetricFlow": {
+      "value": 30000,
+      "unit": "m3/h"
+    }
+  },
+  "unitOverrides": {
+    "power": "W",
+    "pressure": "kPa"
+  }
+}ó

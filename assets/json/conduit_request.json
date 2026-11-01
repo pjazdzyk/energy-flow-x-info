@@ -1,0 +1,40 @@
+{
+  "processType": "CONDUIT_FLOW",
+  "conduitStructureData": {
+    "conduitShape": "RECTANGULAR",
+    "innerWidth": {
+      "value": 300,
+      "unit": "mm"
+    },
+    "innerHeight": {
+      "value": 200,
+      "unit": "mm"
+    }
+  },
+  "airFlowData": {
+    "pressure": {
+      "value": 101325,
+      "unit": "Pa"
+    },
+    "temperature": {
+      "value": 40.73,
+      "unit": "oC"
+    },
+    "relativeHumidity": {
+      "value": 30,
+      "unit": "%"
+    },
+    "volumetricFlow": {
+      "value": 2059.6,
+      "unit": "m3/h"
+    }
+  },
+  "length": {
+    "value": 1,
+    "unit": "m"
+  },
+  "unitOverrides": {
+    "pressure": "Pa",
+    "volumetricFlow": "m3/h"
+  }
+}

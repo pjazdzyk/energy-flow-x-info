@@ -1,0 +1,66 @@
+{
+  "vapourState": "UNSATURATED",
+  "dryBulbTemperature": {
+    "value": 293.15,
+    "unit": "K"
+  },
+  "absolutePressure": {
+    "value": 101.325,
+    "unit": "kPa"
+  },
+  "density": {
+    "value": 1.1926543154098586,
+    "unit": "kg/m³"
+  },
+  "relativeHumidity": {
+    "value": 40.5,
+    "unit": "%"
+  },
+  "saturationPressure": {
+    "value": 2.3388037000739628,
+    "unit": "kPa"
+  },
+  "humidityRatio": {
+    "value": 0.00586910360662976,
+    "unit": "kg/kg"
+  },
+  "maxHumidityRatio": {
+    "value": 0.014695342844136424,
+    "unit": "kg/kg"
+  },
+  "wetBulbTemperature": {
+    "value": 285.57688512969264,
+    "unit": "K"
+  },
+  "dewPointTemperature": {
+    "value": 279.3320577829839,
+    "unit": "K"
+  },
+  "specificHeat": {
+    "value": 1.0156243847968665,
+    "unit": "kJ/(kg·K)"
+  },
+  "specificEnthalpy": {
+    "value": 34.99051888132874,
+    "unit": "kJ/kg"
+  },
+  "dynamicViscosity": {
+    "value": 0.000017980033308893245,
+    "unit": "kg/(m·s)"
+  },
+  "kinematicViscosity": {
+    "value": 0.000015075645202955865,
+    "unit": "m²/s"
+  },
+  "thermalConductivity": {
+    "value": 0.026118785567117237,
+    "unit": "W/(m·K)"
+  },
+  "thermalDiffusivity": {
+    "value": 0.00002156280603887848,
+    "unit": "m²/s"
+  },
+  "prandtlNumber": {
+    "value": 0.6991504341213272
+  }
+}

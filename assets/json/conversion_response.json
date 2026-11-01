@@ -1,0 +1,22 @@
+{
+  "inputPanelProperties": {
+    "dryBulbTemperature": {
+      "value": 298.25,
+      "unit": "K"
+    },
+    "absolutePressure": {
+      "value": 0.9,
+      "unit": "bar"
+    }
+  },
+  "outputPanelProperties": {
+    "absolutePressure": {
+      "value": 900,
+      "unit": "hPa"
+    },
+    "airDensity": {
+      "value": 4.33527506616E-5,
+      "unit": "lb/in³"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "processType": "HEATING",
+  "processMode": "FROM_TEMPERATURE",
+  "processFlowMode": "FROM_INLET_VOL_FLOW",
+  "targetTemperature": {
+    "value": 22,
+    "unit": "oC"
+  },
+  "airFlowData": {
+    "pressure": {
+      "value": 101325,
+      "unit": "Pa"
+    },
+    "temperature": {
+      "value": -20,
+      "unit": "oC"
+    },
+    "relativeHumidity": {
+      "value": 95,
+      "unit": "%"
+    },
+    "volumetricFlow": {
+      "value": 30000,
+      "unit": "m3/h"
+    }
+  },
+  "unitOverrides": {}
+}

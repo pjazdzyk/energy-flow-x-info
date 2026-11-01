@@ -1,0 +1,28 @@
+{
+  "processType": "HEATING",
+  "processMode": "FROM_POWER",
+  "processFlowMode": "FROM_INLET_VOL_FLOW",
+  "heatOfProcess": {
+    "value": 10,
+    "unit": "kW"
+  },
+  "airFlowData": {
+    "pressure": {
+      "value": 101325,
+      "unit": "Pa"
+    },
+    "temperature": {
+      "value": -20,
+      "unit": "oC"
+    },
+    "relativeHumidity": {
+      "value": 95,
+      "unit": "%"
+    },
+    "volumetricFlow": {
+      "value": 30000,
+      "unit": "m3/h"
+    }
+  },
+  "unitOverrides": {}
+}ó
