@@ -139,7 +139,7 @@ EnergyFlowX is not affiliated with, sponsored by, or endorsed by these manufactu
 - **Structure and properties.** Browse the model by storey or by IFC class, read every property set and quantity as the file carries it, and search by expressID or GlobalId.
 - **Sections and views.** Quick section planes, saved section views and a 3D box crop, standard views and an orthographic camera.
 - **Colour by data.** Colour by class, storey, MEP system, property, quantity or a list of GUIDs, with reusable layers.
-- **Measuring.** Distance, area, angle, volume and point coordinates, snapped to the model, in Metric or Imperial.
+- **Measuring.** Distance, area, angle and point coordinates, snapped to the model, and element volume read from a click on the element, in Metric or Imperial.
 - **IDS and BCF.** Check a model against an IDS file, write your own specifications in the IDS Builder, and exchange issues as BCF.
 - **Site and surroundings.** Place the model on the map from its georeference, drape terrain under it, and import neighbouring buildings and trees, behind an explicit opt-in.
 - **Getting the work out.** Quantity takeoff to CSV, GLB, OBJ and STL export, screenshots and a viewport recorder.
