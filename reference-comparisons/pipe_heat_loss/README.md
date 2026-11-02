@@ -73,9 +73,11 @@ run its `zone`, `wallThickness`, `wallMaterial` and `insulation` settings. The f
 same designs as REST request bodies, which is the form the product's own tests use.
 
 **Record of this run.** Reference script run on 2026-11-01 with Python 3.12.3. Water rows: the IAPWS
-formulations, evaluated at 0.2 MPa on 2026-11-01. Server column: the answers of the Hydronic solve, build
-carrying pipe heat loss, to the three request files, recorded the same day. The version of the build is in the
-header of every REST reply and in every MCP reply.
+formulations, evaluated at 0.2 MPa on 2026-11-01. Server column: the answers of the Hydronic solve to the
+three request files, recorded the same day. Checked again on 2026-11-02 against the production service over the
+members MCP server, which states four significant digits, on EnergyFlowX 1.0.2 with flow-symphony 2.12.0 and result
+epoch 24: every figure agrees to those digits. The version of the build is in the header of every REST reply and in
+every MCP reply.
 
 ## 4. Result
 
@@ -115,6 +117,8 @@ separate those. It says nothing about any other pipe, fluid or zone.
 - **No delay or storage.** The fluid reaches the end of a run in the same step, and the pipe stores no heat over
   time.
 - **No contact resistance** between layers.
+- **Fluid out of range.** A run whose own heat would take its fluid out of range, freezing, boiling or crossing
+  saturation, is named in the reply, and it and what follows it state no temperature, heat or duty.
 - **Material data.** Built-in materials are representative values of each class and are marked as assumed in the
   reply. A material you state yourself is marked as your data.
 - Two cases of one fluid and one wall material show two points of a model. They do not span it.
